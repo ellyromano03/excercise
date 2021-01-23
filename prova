@@ -1,0 +1,49 @@
+const fs = require("fs")
+
+/*const res = [null, null]
+
+const finito = () => {
+    if (!res[0] || !res[1]){
+        return
+    }
+    console.log(res[0] + " " + res[1])
+}*/
+
+fs.readFile("./testo1.txt", (err, data) => {
+    if (err){
+        throw err
+    }
+    console.log("Caricato testo 1")
+    const testo1 = data.toString()
+    //res[0] = testo1
+    //finito()
+
+
+
+    fs.readFile("./testo2.txt", (err, data) => {
+        if (err){
+            throw err
+        }
+        console.log("Caricato testo 2")
+        const testo2 = data.toString()
+        //res[1] = testo2
+        //finito()
+
+        fs.readFile("./testo3.txt", (err, data) => {
+            if (err){
+                throw err
+            }
+            console.log("Caricato testo 3")
+            const testo3 = data.toString()
+
+            fs.writeFile("./testo4", testo1 + " " + testo2 + " " + testo3, (err) => {
+                if (err){
+                    throw err
+                }
+                console.log("salvato file")
+            })
+        })
+    })       
+
+})
+console.log("fine!")
