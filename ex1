@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+"use strict"
+let addNum = (text, min, max) => {
+   let num = parseInt(prompt(text + ` ${min} ${max}`, ""))
+    while(num<min || num>max){
+        num = parseInt(prompt(text + ` ${min} ${max}`, ""))
+    }
+    return num;
+}
+const minNum=10;
+const maxNum=80;
+let n = addNum("Inserisci un numero tra questi due valori: ", minNum, maxNum);
+
+</script>
+</body>
+</html>
