@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+"use strict"
+
+function Delta(a, b, c){
+    let delta = (b*b)-(4*a*c)
+    alert(delta)
+    return delta
+
+}
+let a;
+    do{ 
+        a = prompt('inserisci un numero: ', '');
+        if(a != 0){
+            break;
+        }
+    }while(true);
+   
+    let b = prompt('inserisci un numero: ', '');
+    let c = prompt('inserisci un numero: ', '');
+ 
+function Results(a, b, delta){
+    if (delta>=0){
+        ris_1= (-b+ Math.sqrt(delta))/(2*a);
+        ris_2= (-b -Math.sqrt(delta))/(2*a);
+    }else{
+        alert("il delta è negativo");
+    };
+    if (ris_1==ris_2 && delta>=0){
+        alert(`le soluzioni coincidono e sono: ${ris_1}`)
+    }
+    else{
+        alert(`le soluzioni sono distinte e sono: ${ris_1} e ${ris_2}`)
+    }
+
+}
+const a = prompt('inserisci un numero: ', '');
+const b = prompt('inserisci un numero: ', '');
+const c = prompt('inserisci un numero: ', '');
+const d = Delta(a, b, c)
+Results(a, b, d)
+ 
+   
+
+</script>
+</body>
+</html>
+ 
