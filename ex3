@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+"use strict"
+let max=0,sum=0, prodotto=1;
+let a = prompt("inserisci un valore: ", "")
+let b = prompt("inserisci un valore: ", "")
+let k = prompt("inserisci un valore: ", "")
+a = parseInt(a)
+b = parseInt(b)
+k = parseInt(k)
+let min = a, e=0;
+let par = new Array()
+
+const num = new Array(a,b,k);
+for (let i=0; i<3; i++){
+    if(num[i] > max) max = num[i]
+    else if(num[i] < min) min = num[i]
+}
+alert("il valore maggiore: " + max)
+alert("il valore minore: " + min)
+if(a < b){
+    for(let i=a; i<=b; i++) {
+        sum+=i
+        if(i%2==0){ 
+            par[e] = i;
+            e++;
+        }
+        if(i%k==0){
+            alert(i + " è un multiplo di " + k)
+        }
+    }
+    
+    for(let i=0; i<e; i++){
+        prodotto = par[i]*prodotto
+    }
+}
+else{
+    for(let i=b; i<=a; i++) {
+        sum+=i;
+        if(i%2==0){ 
+            par[e] = i;
+            e++;
+        }
+        if(i%k==0){
+           alert(i + " è un multiplo di " + k)
+        }
+    }
+    for(let i=0; i<e; i++){
+        prodotto = par[i]*prodotto
+    }
+}
+alert("la somma dei valori tra A e B: " + sum)
+alert("il prodotto dei val pari tra A e B: " + prodotto);
+</script>
+</body>
+</html>
