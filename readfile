@@ -1,13 +1,5 @@
 const fs = require("fs")
 
-/*const res = [null, null]
-
-const finito = () => {
-    if (!res[0] || !res[1]){
-        return
-    }
-    console.log(res[0] + " " + res[1])
-}*/
 
 fs.readFile("./testo1.txt", (err, data) => {
     if (err){
